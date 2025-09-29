@@ -28,6 +28,7 @@ def contactform(req):
 
             fn=userModel(name=n, city=c, phone=p, state=s, email=e)
             fn.save()
+            return redirect("thankyou")
         
         except Exception as ex:
             print("Error:", ex)
