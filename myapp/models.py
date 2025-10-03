@@ -7,3 +7,4 @@ class userModel(models.Model):
     city=models.CharField(max_length=50)
     state=models.CharField(max_length=40)
     email=models.EmailField()
+    message=models.TextField(default="U r welcome")

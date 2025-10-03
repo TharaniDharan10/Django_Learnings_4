@@ -25,8 +25,9 @@ def contactform(req):
             p=req.POST.get("phone")
             s=req.POST.get("state")
             e=req.POST.get("email")
+            m=req.POST.get("message")
 
-            fn=userModel(name=n, city=c, phone=p, state=s, email=e)
+            fn=userModel(name=n, city=c, phone=p, state=s, email=e, message=m)
             fn.save()
             return redirect("thankyou")
         
